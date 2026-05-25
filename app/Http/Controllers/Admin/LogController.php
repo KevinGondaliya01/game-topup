@@ -1,0 +1,2 @@
+<?php
+namespace App\Http\Controllers\Admin;use App\Http\Controllers\Controller;use Illuminate\Support\Facades\File;class LogController extends Controller{public function index(){$path=storage_path('logs/laravel.log');$logs=File::exists($path)?File::get($path):'';$logs=collect(explode("\n",$logs))->reverse()->take(300)->reverse()->implode("\n");return view('admin.logs.index',compact('logs'));}public function clear(){File::put(storage_path('logs/laravel.log'),'');return back()->with('success','Logs cleared.');}}

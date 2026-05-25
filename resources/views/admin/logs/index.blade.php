@@ -1,0 +1,2 @@
+@extends('layouts.admin')
+@section('content')<div class='card'><div class='card-header'><h3 class='card-title'>Error Logs</h3><form method='post' action='{{ route('admin.logs.clear') }}' class='float-right'>@csrf<button class='btn btn-danger btn-sm'>Clear Logs</button></form></div><div class='card-body'><pre style='background:#071827;color:#dbeafe;padding:18px;border-radius:12px;max-height:650px;overflow:auto'>{{ $logs }}</pre></div></div>@endsection

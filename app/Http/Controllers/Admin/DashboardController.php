@@ -1,0 +1,2 @@
+<?php
+namespace App\Http\Controllers\Admin;use App\Http\Controllers\Controller;use App\Models\Game;use App\Models\TopupOrder;use App\Models\User;use App\Models\PaymentTransaction;class DashboardController extends Controller{public function index(){return view('admin.dashboard',['games'=>Game::count(),'orders'=>TopupOrder::count(),'users'=>User::where('role','user')->count(),'payments'=>PaymentTransaction::where('status','paid')->count(),'latestOrders'=>TopupOrder::with('user','game')->latest()->limit(8)->get()]);}}

@@ -1,0 +1,3 @@
+<?php $__env->startSection('content'); ?><div class='card'><div class='card-header'><h3 class='card-title'>Error Logs</h3><form method='post' action='<?php echo e(route('admin.logs.clear')); ?>' class='float-right'><?php echo csrf_field(); ?><button class='btn btn-danger btn-sm'>Clear Logs</button></form></div><div class='card-body'><pre style='background:#071827;color:#dbeafe;padding:18px;border-radius:12px;max-height:650px;overflow:auto'><?php echo e($logs); ?></pre></div></div><?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\gaming-app\resources\views/admin/logs/index.blade.php ENDPATH**/ ?>

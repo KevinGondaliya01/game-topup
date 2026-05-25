@@ -1,0 +1,2 @@
+<?php
+namespace App\Models;use Illuminate\Database\Eloquent\Model;class PaymentTransaction extends Model{protected $fillable=['tx_no','user_id','payable_type','payable_id','purpose','gateway','status','amount_minor','currency_code','gateway_order_id','gateway_payment_id','gateway_signature','gateway_response'];protected $casts=['gateway_response'=>'array'];public function user(){return $this->belongsTo(User::class);}public function payable(){return $this->morphTo();}}

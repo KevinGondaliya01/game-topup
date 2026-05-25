@@ -1,0 +1,3 @@
+<?php $__env->startSection('content'); ?><div class='card' style='max-width:480px;margin:40px auto'><h2>Login</h2><form method='post' action='<?php echo e(route('login.post')); ?>'><?php echo csrf_field(); ?><label>Email</label><input name='email' type='email' required value='<?php echo e(old('email')); ?>'><br><br><label>Password</label><input name='password' type='password' required><br><br><button class='btn' style='width:100%'>Login</button></form></div><?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.store', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\gaming-app\resources\views/auth/login.blade.php ENDPATH**/ ?>

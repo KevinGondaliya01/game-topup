@@ -1,0 +1,3 @@
+<?php $__env->startSection('content'); ?><div class='card' style='text-align:center;max-width:520px;margin:50px auto'><h1>404</h1><p class='muted'>Page not found.</p><a class='btn' href='<?php echo e(route('home')); ?>'>Back Home</a></div><?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.store', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\gaming-app\resources\views/errors/404.blade.php ENDPATH**/ ?>

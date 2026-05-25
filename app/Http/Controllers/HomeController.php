@@ -1,0 +1,2 @@
+<?php
+namespace App\Http\Controllers;use App\Models\Banner;use App\Models\Game;use App\Models\Video;class HomeController extends Controller{public function index(){return view('store.home',['banners'=>Banner::where('is_active',1)->where('placement','home')->orderBy('sort_order')->get(),'games'=>Game::with('packages')->where('is_active',1)->orderBy('sort_order')->get(),'videos'=>Video::where('is_active',1)->orderBy('sort_order')->get()]);}}

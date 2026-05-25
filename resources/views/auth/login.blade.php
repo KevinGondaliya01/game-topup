@@ -1,0 +1,2 @@
+@extends('layouts.store')
+@section('content')<div class='card' style='max-width:480px;margin:40px auto'><h2>Login</h2><form method='post' action='{{ route('login.post') }}'>@csrf<label>Email</label><input name='email' type='email' required value='{{ old('email') }}'><br><br><label>Password</label><input name='password' type='password' required><br><br><button class='btn' style='width:100%'>Login</button></form></div>@endsection

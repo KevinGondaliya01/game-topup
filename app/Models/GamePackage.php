@@ -1,0 +1,2 @@
+<?php
+namespace App\Models;use Illuminate\Database\Eloquent\Model;class GamePackage extends Model{protected $fillable=['game_id','provider_id','name','sku','price_minor','currency_code','credit_label','provider_product_id','delivery_mode','image','is_active','sort_order'];public function game(){return $this->belongsTo(Game::class);}public function provider(){return $this->belongsTo(Provider::class);}}

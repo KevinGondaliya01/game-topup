@@ -1,0 +1,2 @@
+<?php
+namespace App\Http\Controllers;use App\Models\WalletTransaction;use App\Services\WalletService;use Illuminate\Support\Facades\Auth;class WalletController extends Controller{public function index(WalletService $walletService){$wallet=$walletService->ensure(Auth::id());$transactions=WalletTransaction::where('user_id',Auth::id())->latest()->paginate(10);return view('wallet.index',compact('wallet','transactions'));}}
